@@ -1,3 +1,21 @@
+var Amadeus = require('amadeus');
+
+var amadeus = new Amadeus({
+  Amadeus_API_Key='t7qbMbBNlGyavZ81oZWPbfrARAgivV6Y'
+  Amadeus_API_Secret_Key='VU8ez5oAdQGCmm0e'
+});
+
+amadeus.shopping.flightOffersSearch.get({
+    originLocationCode: 'SYD',
+    destinationLocationCode: 'BKK',
+    departureDate: '2022-06-01',
+    adults: '2'
+}).then(function(response){
+  console.log(response.data);
+}).catch(function(responseError){
+  console.log(responseError.code);
+});
+
 const path = require('path');
 const express = require('express');
 const session = require('express-session');

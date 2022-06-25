@@ -1,6 +1,9 @@
 var Amadeus = require('amadeus');
 
-var amadeus = new Amadeus();
+var amadeus = new Amadeus({
+  clientId: process.env.KEY,
+  clientSecret: process.env.SECRET_KEY,
+});
 
 amadeus.shopping.flightOffersSearch
   .get({

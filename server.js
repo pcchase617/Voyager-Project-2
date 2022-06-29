@@ -1,43 +1,63 @@
-const path = require('path');
+const Amadeus = require('amadeus');
+const { response } = require('express');
 const express = require('express');
-const session = require('express-session');
 const exphbs = require('express-handlebars');
-const routes = require('./controllers');
-const helpers = require('./utils/helpers');
+const hbs = exphbs.create({});
+require('dotenv').config();
 
-const sequelize = require('./config/connection');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
-const app = express();
-const PORT = process.env.PORT || 3001;
-
-// Set up Handlebars.js engine with custom helpers
-const hbs = exphbs.create({ helpers });
-
-const sess = {
-  secret: 'Super secret secret',
-  cookie: {
-    maxAge: 1000 * 60 * 60 * 24 * 7 * 2, // 2 weeks (just an example, you can decide how long to keep session alive)
-  },
-  resave: false,
-  saveUninitialized: true,
-  store: new SequelizeStore({
-    db: sequelize,
-  }),
-};
-
-app.use(session(sess));
-
-// Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+app.use(require('./controllers/homeRoutes'));
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+const app = express();
+const amadeus = new Amadeus({
+  clientId: process.env.API_KEY,
+  clientSecret: process.env.API_SECRET,
+});
+const port = process.env.PORT || 3001;
 
-app.use(routes);
+app.use(express.static('public'));
 
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+app.get('/api/autocomplete', async (req, res) => {
+  try {
+    const { query } = req;
+    const { data } = await amadeus.referenceData.locations.get({
+      keyword: query.keyword,
+      subType: Amadeus.location.city,
+    });
+    res.json(data);
+  } catch (err) {
+    console.error(err.res);
+    res.json([]);
+  }
+});
+
+//search for flights (http://localhost:3001/api/search)
+app.get('/api/search', async (req, res) => {
+  try {
+    const { query } = req;
+    console.log('QUERY', query);
+    const { data } = await amadeus.shopping.flightOffersSearch.get({
+      originLocationCode: query?.origin,
+      destinationLocationCode: query?.destination,
+      departureDate: query?.departureDate,
+      adults: query?.adults,
+      children: query?.children,
+      infants: query?.infants,
+      travelClass: query?.travelClass,
+      ...(query?.returnDate ? { returnDate: query?.returnDate } : {}),
+    });
+    res.json(data);
+  } catch (err) {
+    console.error(err);
+    response.json([]);
+  }
+});
+
+app.get('/search', (req, res) => {
+  res.render('home');
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
 });

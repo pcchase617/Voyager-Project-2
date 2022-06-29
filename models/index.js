@@ -3,5 +3,6 @@
 //import the example model
 const Example = require('./Example');
 
+Example.hasMany();
 
 module.exports = { Example };

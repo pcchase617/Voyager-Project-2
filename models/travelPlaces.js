@@ -12,16 +12,21 @@ Example.init(
       autoIncrement: true,
     },
     //name this column whatever you want
-    column1: {
+    location: {
       //this is the type of data that will be stored in this column
       type: DataTypes.STRING,
       //each time a row of data is inserted, this column will need to have a value
       allowNull: false,
     },
-    column2: {
+    date: {
       type: DataTypes.INTEGER,
       //value in this column is optional (can be nullish)
-      allowNull: true,
+      allowNull: false,
+    },
+    passangers: {
+      type: DataTypes.INTEGER,
+      //value in this column is optional (can be nullish)
+      allowNull: false,
     },
   },
   {

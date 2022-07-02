@@ -12,4 +12,5 @@ router.get('/otherpage', (req, res) => {
   res.render('otherpage');
 });
 
+
 module.exports = router;

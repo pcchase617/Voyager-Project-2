@@ -1,24 +1,21 @@
 const Amadeus = require('amadeus');
 const { response } = require('express');
-
 const express = require('express');
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
 require('dotenv').config();
-
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
-app.use(require('./controllers/homeRoutes'));
-
 const app = express();
+
 const amadeus = new Amadeus({
   clientId: process.env.API_KEY,
   clientSecret: process.env.API_SECRET,
 });
 const port = process.env.PORT || 3001;
 
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+app.use(require('./controllers/homeRoutes'));
 app.use(express.static('public'));
-
 app.get('/api/autocomplete', async (req, res) => {
   try {
     const { query } = req;
@@ -54,11 +51,9 @@ app.get('/api/search', async (req, res) => {
     response.json([]);
   }
 });
-
 app.get('/search', (req, res) => {
   res.render('home');
 });
-
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });

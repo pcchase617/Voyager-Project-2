@@ -1,15 +1,17 @@
 const Amadeus = require('amadeus');
 const { response } = require('express');
+
 const express = require('express');
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
 require('dotenv').config();
 
+const app = express();
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(require('./controllers/homeRoutes'));
+console.log(process.env.API_KEY);
 
-const app = express();
 const amadeus = new Amadeus({
   clientId: process.env.API_KEY,
   clientSecret: process.env.API_SECRET,

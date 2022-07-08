@@ -28,8 +28,8 @@ module.exports = {
 };
 
 //import the example model
-const Example = require('./Example');
+// const Example = require('./Example');
 
-Example.hasMany();
+// Example.hasMany();
 
-module.exports = { Example };
+// module.exports = { Example };

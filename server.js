@@ -3,6 +3,7 @@ const { response } = require('express');
 
 const express = require('express');
 const exphbs = require('express-handlebars');
+const sequelize = require('sequelize');
 const hbs = exphbs.create({});
 require('dotenv').config();
 
@@ -11,7 +12,6 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(require('./controllers/homeRoutes'));
 console.log(process.env.API_KEY);
 
 const amadeus = new Amadeus({
@@ -36,6 +36,8 @@ app.get('/api/autocomplete', async (req, res) => {
   }
 });
 
+app.use(require('./controllers/homeRoutes'));
+
 //search for flights (http://localhost:3001/api/search)
 app.get('/api/search', async (req, res) => {
   try {
@@ -58,10 +60,14 @@ app.get('/api/search', async (req, res) => {
   }
 });
 
+app.get('/api/trips', (req, res) => {
+  trip.getall;
+});
+
 app.get('/search', (req, res) => {
   res.render('home');
 });
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
-});
+}); 

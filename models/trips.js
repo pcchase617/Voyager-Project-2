@@ -1,9 +1,12 @@
+//CREATE MODEL OF TRIPS HERE
+//CREATE TABLE
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Example extends Model {}
+class Trips extends Model {}
 
-Example.init(
+Trips.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -28,7 +31,7 @@ Example.init(
       //value in this column is optional (can be nullish)
       allowNull: false,
     },
-  },  
+  },
   {
     hooks: {
       //this hook/function will run everytime before a new row is inserted
@@ -47,4 +50,4 @@ Example.init(
   }
 );
 
-module.exports = Example;
+module.exports = Trips;

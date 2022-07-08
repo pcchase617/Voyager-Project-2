@@ -51,6 +51,7 @@ app.get('/api/search', async (req, res) => {
       travelClass: query?.travelClass,
       ...(query?.returnDate ? { returnDate: query?.returnDate } : {}),
     });
+    console.log(data);
     res.json(data);
   } catch (err) {
     console.error(err);

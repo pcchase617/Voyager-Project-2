@@ -1,16 +1,22 @@
 //These are all the view routes for your application
 const router = require('express').Router();
 
+const withAuth = require('../utils/helpers');
+
 //when a GET request is received on the root(/) route,
 //render the home.handlebars view
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
   res.render('home');
 });
 
-router.get('/otherpage', (req, res) => {
+router.get('/otherpage', withAuth, (req, res) => {
   //this will render the view otherpage.handlebars
   res.render('otherpage');
 });
 
+router.get('/login', (req, res) => {
+  //this will render the login
+  res.render('login');
+});
 
 module.exports = router;

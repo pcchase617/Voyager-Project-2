@@ -1,4 +1,25 @@
+/* body  {
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+
+} */
+
 
 .flex-1 {
-    flex: 1;
+  flex: 1;
+}
+
+.nav-item {
+  width: 15%;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
+a button.btn {
+  height: 60px;
+  padding: 5px;
+  border-radius: 25%;
+  margin: 10px;
+  background-color: orange !important;
+  box-shadow: #00000030 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }

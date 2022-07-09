@@ -40,16 +40,20 @@ app.use(require('./controllers'));
 app.get('/api/autocomplete', async (req, res) => {
   try {
     const { query } = req;
+    console.log(query);
     const { data } = await amadeus.referenceData.locations.get({
       keyword: query.keyword,
       subType: Amadeus.location.city,
     });
+    console.log(data, 'data');
     res.json(data);
   } catch (err) {
-    console.error(err.res);
+    console.error(err);
     res.json([]);
   }
 });
+
+app.use(require('./controllers/homeRoutes'));
 
 //search for flights (http://localhost:3001/api/search)
 app.get('/api/search', async (req, res) => {
@@ -71,6 +75,10 @@ app.get('/api/search', async (req, res) => {
     console.error(err);
     response.json([]);
   }
+});
+
+app.get('/api/trips', (req, res) => {
+  trip.getall;
 });
 
 app.get('/search', (req, res) => {

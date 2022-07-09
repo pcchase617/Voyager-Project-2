@@ -1,12 +1,11 @@
 const Amadeus = require('amadeus');
 const { response } = require('express');
 const session = require('express-session');
-//const sequelize = require('./config/connection');
+const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const express = require('express');
 const exphbs = require('express-handlebars');
-const sequelize = require('sequelize');
 const hbs = exphbs.create({});
 require('dotenv').config();
 
@@ -41,13 +40,15 @@ app.use(require('./controllers'));
 app.get('/api/autocomplete', async (req, res) => {
   try {
     const { query } = req;
+    console.log(query);
     const { data } = await amadeus.referenceData.locations.get({
       keyword: query.keyword,
       subType: Amadeus.location.city,
     });
+    console.log(data, 'data');
     res.json(data);
   } catch (err) {
-    console.error(err.res);
+    console.error(err);
     res.json([]);
   }
 });

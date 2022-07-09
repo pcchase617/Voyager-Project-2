@@ -5,7 +5,7 @@ const withAuth = require('../utils/helpers');
 
 //when a GET request is received on the root(/) route,
 //render the home.handlebars view
-router.get('/', withAuth, (req, res) => {
+router.get('/booking', (req, res) => {
   res.render('home');
 });
 
@@ -17,6 +17,10 @@ router.get('/otherpage', withAuth, (req, res) => {
 router.get('/login', (req, res) => {
   //this will render the login
   res.render('login');
+});
+
+router.get('/', (req, res) => {
+  res.render('homepage');
 });
 
 module.exports = router;

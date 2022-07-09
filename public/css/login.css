@@ -9,11 +9,12 @@
 .form input {
   justify-content: end;
   margin-bottom: 0.5rem;
+  border-style: solid;
+  border-radius: 5px;
 }
 
 .form.login-form {
   vertical-align: middle;
-  border: 10mm;
 }
 
 .login-form .form-group {

@@ -43,13 +43,13 @@ Deployed Site [here]()
 
 ## Video of utilizing the app.
 
-![Example of start screen]()
+![Example of start screen](https://raw.githubusercontent.com/lgarced/Project-2/main/voyage.PNG?token=GHSAT0AAAAAABR7IWWUSYW3QRNCSW3TRPP6YWJY47A)
 
-![Example of creating a login "short video"]()
+![Example of signing up "short video"](https://drive.google.com/file/d/1_P6PE6uRdus-lITIs2wJYXJxxw0LFmcP/view)
 
 ![Example of logining to the website "short video"]()
 
-![Example of searching for a desitination and cost of fight "short video"]()
+![Example of searching for a destination and cost of fight "short video"](https://drive.google.com/file/d/1lqM1p2Wior75YVS6i3ymunLmhD6TdqPo/view)
 
 # Stack:
 *Java, Node.js, Express.js, Handlebars.js

@@ -1,5 +1,5 @@
-# Next Destination Project
-A travel app that generates information about flights, and costs based on a set criteria.  
+# Voyage Advisor
+A travel app that generates information about flights, and costs based on a set criteria
 
 ## About Uss O_O
 Project Members: 

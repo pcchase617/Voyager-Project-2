@@ -1,0 +1,42 @@
+.row {
+  text-align: center;
+  margin: 300px;
+  align-items: right;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form input {
+  justify-content: end;
+  margin-bottom: 0.5rem;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.form.login-form {
+  vertical-align: middle;
+}
+
+.login-form .form-group {
+  position: relative;
+  left: -40px;
+}
+
+.login-form .form-group label {
+  min-width: 100px;
+  text-align: right;
+}
+
+.form.signup-form {
+  vertical-align: middle;
+}
+
+.signup-form .form-group {
+  position: relative;
+  left: -40px;
+}
+
+.signup-form .form-group label {
+  min-width: 100px;
+  text-align: right;
+}

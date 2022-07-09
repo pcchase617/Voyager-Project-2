@@ -1,4 +1,4 @@
-# Next Destination
+# Voyage Advisor
 A travel app that generates information about flights, and costs based on a set criteria
 
 Project Members: Camilo, Chase, Liberato, Luna

@@ -28,7 +28,7 @@ Example.init(
       //value in this column is optional (can be nullish)
       allowNull: false,
     },
-  },
+  },  
   {
     hooks: {
       //this hook/function will run everytime before a new row is inserted

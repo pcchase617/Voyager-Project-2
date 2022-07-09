@@ -84,11 +84,14 @@ const search = async () => {
     const response = await fetch(`/api/search?${params}`);
     const data = await response.json();
 
+    const trips = await fetch(``)
+
     return data;
   } catch (error) {
     console.error(error);
   }
 };
+
 const showResults = (results) => {
   console.log(results);
   if (results.length === 0) {

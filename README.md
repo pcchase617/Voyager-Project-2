@@ -1,23 +1,23 @@
 # Voyage Advisor
 A travel app that generates information about flights, and costs based on a set criteria
 
-## About Uss O_O
+## About Us O_O
 Project Members: 
-* Camzilo 
+* Camilo 
 * Chase
 * Liberato
 * Luna
 
 ## Your Task
 
- Our challenge is to build a a traval desitination website with price, place, and real time price update. Our project gol is to utilize the followin items in our project: HTML, CSS, JS, JSON, Jquery, Node, SQL, and API features runnig at current connection of the website. This will allow our browser to run at a danamictally and current data utiliszng the 'amadeus api'
+Our challenge is to build a a travel destination website with price, place, and real time price updates. Our project goal is to utilize the following items in our project: HTML, CSS, JS, JSON, Jquery, Node, SQL, and API features running at current connection of the website. This will allow our browser to run at a dramatically and current data utilizng the 'amadeus api'
 
- ## Project Requirements
- Our chanllege to our Poject will consist of the following task listed bellow:
+## Project Requirements
+Our challenge to our Poject will consist of the following task listed bellow:
 
- * Use Node.js and Express.js to create a RESTful API.
+* Use Node.js and Express.js to create a RESTful API.
 
-* Use Handlebars.js(Or another) as the template engine.
+* Use Handlebars.js (or another language) as the template engine.
 
 * Use MySQL and the Sequelize ORM for the database.
 
@@ -59,19 +59,19 @@ Deployed Site [here]()
 ## Criteria
 * To give the user the ability to create a sign up to our website and use their login to view pervious fight search
 * The user will be allowed to sigup to our website.
-* Our user can always log in to our website and view their previous search video.
-* 
+* Our user can always log in to our website and view their previous search history.
+
 
 ## Project Details
 
-* Utilizing Node.js and Express.js for server resonpes of our data in javascript
+* Utilizing Node.js and Express.js for server responses of our data in javascript.
 
-* API: Utilizing Amadeus API for goble traval data with current updates
+* API: Utilizing Amadeus API for global travel data with current updates.
   
 * SQL: Utilizing SQL for our database of destinations and prices.
   
-* utlizing authentication our our login and signup sessions using (express-session and cookies for tracking)
-  
+* Utilizing authentication in our login and signup sessions using (express-session and cookies for tracking)
+
 
 
 ## Review
@@ -80,4 +80,4 @@ You are required to submit BOTH of the following for review:
 
 * The URL of the functional, deployed application.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
+* The URL of the GitHub repository. Give the repository a unique name and include a ReadMe describing the project.

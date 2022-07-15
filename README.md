@@ -39,7 +39,7 @@ Our challenge to our Poject will consist of the following task listed bellow:
 
 * Be interactive (i.e., accept and respond to user input).
 
-Deployed Site [here]()
+Deployed Site [here](https://voyage-advisor.herokuapp.com/)
 
 ## Video of utilizing the app.
 
@@ -49,7 +49,7 @@ Deployed Site [here]()
 
 ![Example of logining to the website "short video"]()
 
-![Example of searching for a destination and cost of fight "short video"](https://drive.google.com/file/d/1lqM1p2Wior75YVS6i3ymunLmhD6TdqPo/view)
+![Example of searching for a destination and cost of fight "short video"](chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/7e5051df-05de-420f-b921-9aa25e58a899)
 
 # Stack:
 *Java, Node.js, Express.js, Handlebars.js

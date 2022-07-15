@@ -45,11 +45,11 @@ Deployed Site [here](https://voyage-advisor.herokuapp.com/)
 
 ![Example of start screen](https://raw.githubusercontent.com/lgarced/Project-2/main/voyage.PNG?token=GHSAT0AAAAAABR7IWWUSYW3QRNCSW3TRPP6YWJY47A)
 
-![Example of signing up "short video"](https://drive.google.com/file/d/1_P6PE6uRdus-lITIs2wJYXJxxw0LFmcP/view)
+![Example of signing up "short video"](SignupVoyageProject2.gif)
 
-![Example of logining to the website "short video"]()
+![Example of searching for a destination and cost of fight "short video"](ResultsVoyageProject2.gif)
 
-![Example of searching for a destination and cost of fight "short video"](chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/7e5051df-05de-420f-b921-9aa25e58a899)
+<!-- ![Example of logining to the website "short video"]() -->
 
 # Stack:
 *Java, Node.js, Express.js, Handlebars.js
